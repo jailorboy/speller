@@ -68,10 +68,6 @@ bool check(const char* word)
     else
     {
     	node* crawler = hashtable[index];
-    	if (strcmp(hashtable[index]->word,ref_word)==0)
-    	{
-    		return true;
-    	}
     	while (crawler -> next != NULL)
     	{
     		if (strcmp(crawler->word,ref_word)==0)
@@ -79,6 +75,11 @@ bool check(const char* word)
     			return true;
     		}
     		crawler = crawler -> next;
+    	}
+    	//account for the last node
+    	if (strcmp(crawler->word,ref_word)==0)
+    	{
+    		return true;
     	}
     	
     }
@@ -140,7 +141,7 @@ bool load(const char* dictionary)
  */
 unsigned int size(void)
 {
-    // TODO
+    // return the size keeping in account how eof works
     return volume-1;
 }
 
@@ -149,7 +150,7 @@ unsigned int size(void)
  */
 bool unload(void)
 {
-    // TODO
+    // free the memory
     for (int i = 0; i<27;i++)
     {
     	node* cursor = hashtable[i];

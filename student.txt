@@ -649,9 +649,9 @@ VO
 WORDS MISSPELLED:     644
 WORDS IN DICTIONARY:  143091
 WORDS IN TEXT:        19190
-TIME IN load:         3.36
-TIME IN check:        0.53
+TIME IN load:         3.26
+TIME IN check:        0.49
 TIME IN size:         0.00
 TIME IN unload:       0.00
-TIME IN TOTAL:        3.90
+TIME IN TOTAL:        3.76
 
